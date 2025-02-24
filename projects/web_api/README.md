@@ -8,8 +8,9 @@
 ```sh
 docker build -t mineru-api .
 
-# xp's build
+# xp's build: run https://viridian.ise.utk.edu:8000/user/xli27/lab/tree/shared_space/LLM_RAG_Policy_Procedures/companion_projects/web_api
 docker build -t ilabutk/mineru-api .
+
 docker push ilabutk/mineru-api
 ```
 
