@@ -5,8 +5,12 @@
 
 ## 构建方式
 
-```
+```sh
 docker build -t mineru-api .
+
+# xp's build
+docker build -t ilabutk/mineru-api .
+docker push ilabutk/mineru-api
 ```
 
 或者使用代理：
@@ -19,9 +23,14 @@ docker build --build-arg http_proxy=http://127.0.0.1:7890 --build-arg https_prox
 
 ```
 docker run --rm -it --gpus=all -v ./paddleocr:/root/.paddleocr -p 8000:8000 mineru-api
+
+docker run --rm -it --gpus=all -v ./paddleocr:/root/.paddleocr -p 8000:8000 ilabutk/mineru-api
+
 ```
 
 初次调用 API 时会自动下载 paddleocr 的模型（约数十 MB），其余模型已包含在镜像中。
+
+
 
 ## 测试参数
 
